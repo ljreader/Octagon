@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>WWF Battle Royal</title>
+
+	<!--Meyer reset-->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<!--Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
+	<!--Font Awesome-->
+    <script src="https://use.fontawesome.com/5f1f3cb4d3.js"></script>
+	<!--custom css-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!--jQuery-->
+	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-xs-12 col-sm-12 col-md-4 col-md-push-8 col-lg-4 col-lg-push-8">
+				<div id = "header">
+					<img src="assets/images/WWF_LOGO_1982-1994.png" alt = "WWF Logo" class = "img-responsive">
+                <h3>Battle Royal - WWF Legends!</h3>
+				</div>
+			</div>
+			<div class = "col-xs-12 col-sm-12 col-md-8 col-md-pull-4 col-lg-8 col-lg-pull-4" id="battle">
+				<div id = "active"></div>
+				<div class = "col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">
+					<h1>Vs.</h1>
+					<button class = "btn btn-primary center-block" id="fight">Wrestle</button>
+				</div>
+				<div id = "under-attack"></div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-xs-12 col-sm-12 col-md-8 col-lg-8 text-center">
+				<button class = "btn btn-primary center-block" id="reset">Another Round?</button>
+				<div id = "alerts"></div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class = "row">
+			<div class = "col-xs-12 col-sm-12 col-md-8 col-lg-8">
+				<div class="row">
+
+					<!--Game Characters-->
+					<div id = "available">
+					<p>Tag your <span id="choose">legend!</span></p>
+
+
+
+
+
+					<!-- Hulk Hogan -->
+						<div class = "character col-xs-6 col-sm-6 col-md-3 col-lg-3 thumbnail" id="HulkHogan" data-name = "Hulk Hogan" data-hp = "100" data-attack-power = "6" data-counter-attack = "20">
+						  	<!--<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+						    	<div class="thumbnail">-->
+							    	<div class = "caption">
+							    		Hulk Hogan
+							    	</div>
+							    	<div class = "charpic">
+						      			<img src="assets/images/Hulk Hogan.jpg" alt="Hulk Hogan">
+						      		</div>
+						      		<div class="caption wrestlerPts">100</div>  
+						    	<!--</div>
+						  	</div>-->
+						</div>
+						
+
+
+
+
+						<!-- Andre the Giant -->  	
+					  	<div class = "character col-xs-6 col-sm-6 col-md-3 col-lg-3 thumbnail" id = "AndreTheGiant" data-name = "AndreTheGiant" data-hp = "120" data-attack-power = "6" data-counter-attack = "24">
+						  	<!--<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+						    	<div class="thumbnail">-->
+							    	<div class = "caption">
+							    		Andre the Giant
+							    	</div>
+							    	<div class = "charpic">
+						      			<img src="assets/images/Andre the Giant.png" alt="Andre the Giant">
+						      		</div>
+						      		<div class="caption wrestlerPts">120</div>
+						    	<!--</div>
+						  	</div>-->
+					  	</div>
+
+
+
+
+					  	<!-- The Undertaker -->
+					  	<div class = "character col-xs-6 col-sm-6 col-md-3 col-lg-3 thumbnail" id = "TheUndertaker" data-name = "The Undertaker" data-hp = "180" data-attack-power = "6" data-counter-attack = "30">
+						  	<!--<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+						    	<div class="thumbnail">-->
+							    	<div class = "caption">
+							    		The Undertaker
+							    	</div>
+							    	<div class = "charpic">
+						      			<img src="assets/images/the-undertaker-3.jpg" alt="The Undertaker">
+						      		</div>
+						      		<div class="caption wrestlerPts">180</div>
+						    	<!--</div>
+						  	</div>-->
+					  	</div>
+
+
+
+
+
+
+
+					  	<!-- The Ultimate Warrior -->
+					  	<div class = "character col-xs-6 col-sm-6 col-md-3 col-lg-3 thumbnail" id = "TheUltimateWarrior" data-name = "The Ultimate Warrior" data-hp = "150" data-attack-power = "6" data-counter-attack = "30">
+						  	<!--<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+						    	<div class="thumbnail">-->
+							    	<div class = "caption">
+							    		The Ultimate Warrior
+							    	</div>
+							    	<div class = "charpic">
+						      			<img src="assets/images/The ultimate warrior (9).jpg" alt="The Ultimate Warrior">
+						      		</div>
+						      		<div class="caption wrestlerPts">150</div>
+						    	<!--</div>
+						  	</div>-->
+					  	</div>
+					  	<br>
+
+
+					  	<!-- Mr T -->
+						<div class = "character col-xs-6 col-sm-6 col-md-3 col-lg-3 thumbnail" id="MrT" data-name = "Mr T" data-hp = "125" data-attack-power = "8" data-counter-attack = "20">
+						  	<!--<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+						    	<div class="thumbnail">-->
+							    	<div class = "caption">
+							    		Mr T
+							    	</div>
+							    	<div class = "charpic">
+						      			<img src="assets/images/Mr T.jpg" alt="Mr T">
+						      		</div>
+						      		<div class="caption wrestlerPts">100</div>  
+						    	<!--</div>
+						  	</div>-->
+						</div>
+
+						<!-- Luna Vachon -->
+						<div class = "character col-xs-6 col-sm-6 col-md-3 col-lg-3 thumbnail" id="LunaVachon" data-name = "Luna Vachon" data-hp = "155" data-attack-power = "5" data-counter-attack = "24">
+						  	<!--<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+						    	<div class="thumbnail">-->
+							    	<div class = "caption">
+							    		Luna Vachon
+							    	</div>
+							    	<div class = "charpic">
+						      			<img src="assets/images/luna Vachon.jpg" alt="Luna Vachon">
+						      		</div>
+						      		<div class="caption wrestlerPts">120</div>  
+						    	<!--</div>
+						  	</div>-->
+						</div>
+
+						<!-- Rey Mysterio -->
+						<div class = "character col-xs-6 col-sm-6 col-md-3 col-lg-3 thumbnail" id="ReyMysterio" data-name = "Rey Mysterio" data-hp = "125" data-attack-power = "6" data-counter-attack = "30">
+						  	<!--<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+						    	<div class="thumbnail">-->
+							    	<div class = "caption">
+							    		Rey Mysterio
+							    	</div>
+							    	<div class = "charpic">
+						      			<img src="assets/images/Rey Mysterio.jpg" alt="Rey Mysterio">
+						      		</div>
+						      		<div class="caption wrestlerPts">180</div>  
+						    	<!--</div>
+						  	</div>-->
+						</div>
+
+
+
+
+
+						<!-- Macho Man Randy Savage -->
+						<div class = "character col-xs-6 col-sm-6 col-md-3 col-lg-3 thumbnail" id="MachoManRandySavage" data-name = "Macho Man Randy Savage" data-hp = "155" data-attack-power = "5" data-counter-attack = "30">
+						  	<!--<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+						    	<div class="thumbnail">-->
+							    	<div class = "caption">
+							    		Macho Man Randy Savage
+							    	</div>
+							    	<div class = "charpic">
+						      			<img src="assets/images/Macho Man.jpg" alt="Macho Man Randy Savage">
+						      		</div>
+						      		<div class="caption wrestlerPts">150</div>  
+						    	<!--</div>
+						  	</div>-->
+						</div>
+										
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+<footer class = "footer text-center">
+    <span>Copyright <i class="fa fa-copyright" aria-hidden="true"></i><span id="year"></span>&nbsp;LJ Reader</span>
+</footer>
+
+<!--custom JS-->
+<script src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
